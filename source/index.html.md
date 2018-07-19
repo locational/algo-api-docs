@@ -209,3 +209,47 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to delete
 
+# space_time_forecast
+
+## Overview
+
+Given a set of counts at locations per n time periods, the algorithm
+will forecast the number at time n+1
+
+### Applicable Scenarios and Problems
+
+Forecasting counts of an event (e.g. numbers of disease cases, numbers
+of tests used) where locations are known and data are available for
+multiple time periods.
+
+## Usage
+
+### Input
+
+Requires nested json of 2 tables.
+
+The first table should be named 'count\_data' and should contain 3
+fields:
+
+1.  'site' a numeric or character ID for each site
+2.  'count' the number of the outcome/events
+3.  'time' the time period in whole integers. These donâ€™t have to be
+    equally spaced.
+
+The second table should be named 'coordinates' and should contain 3
+fields:
+
+1.  'site' a numeric or character ID for each site. Must contain all the
+    sites present in the 'count\_data' table
+2.  'lng' the longitude of each site
+3.  'lat' the latitude of each site
+
+### Output
+
+A json containing 2 fields
+
+1.  'site' the site ID
+2.  'forecast' the predicted number of events in time n+1
+
+## Examples
+
