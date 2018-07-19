@@ -1,3 +1,10 @@
+## Reuse content
+
+Get started with:
+
+`curl https://algorithmia.com/algorithms/hughsturrock/space_time_forecast/docs | pup '#algo-summary' | pandoc -f html -t markdown -o output.md`
+
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/lord/img/master/logo-slate.png" alt="Slate: API Documentation Generator" width="226">
   <br>
